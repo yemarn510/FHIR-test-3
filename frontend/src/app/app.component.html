@@ -1,0 +1,69 @@
+<h1>TEST</h1>
+
+
+
+<div class="p-5 max-w-600 mx-auto">
+  <div class="box">
+    <div class="row no-gutters">
+      <h4>Name TH</h4>
+    </div>
+    <div class="row no-gutters mb-3 align-items-center">
+      <div class="col-4">Prefix</div>
+      <div class="col-8">
+        <ng-select [items]="prefixesTH"
+                 bindLabel="display"
+                 bindValue="value"
+                 [(ngModel)]="patient.name_th.prefix">
+        </ng-select>
+      </div>
+    </div>
+    <div class="row no-gutters mb-3 align-items-center">
+      <div class="col-4">Given</div>
+      <div class="col-8">
+        <input type="text"
+             class="form-control"
+             [(ngModel)]="patient.name_th.given">
+      </div>
+    </div>
+    <div class="row no-gutters mb-3 align-items-center">
+      <div class="col-4">Family</div>
+      <div class="col-8">
+        <input type="text"
+             class="form-control"
+             [(ngModel)]="patient.name_th.family">
+      </div>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="row no-gutters">
+      <h4>Name EN</h4>
+    </div>
+    <div class="row no-gutters mb-3 align-items-center">
+      <div class="col-4">Prefix</div>
+      <div class="col-8">
+        <ng-select [items]="prefixesEN"
+                 bindLabel="display"
+                 bindValue="value"
+                 [(ngModel)]="patient.name_en.prefix">
+        </ng-select>
+      </div>
+    </div>
+    <div class="row no-gutters mb-3 align-items-center">
+      <div class="col-4">Given</div>
+      <div class="col-8">
+        <input type="text"
+             class="form-control"
+             [(ngModel)]="patient.name_en.given">
+      </div>
+    </div>
+    <div class="row no-gutters mb-3 align-items-center">
+      <div class="col-4">Family</div>
+      <div class="col-8">
+        <input type="text"
+             class="form-control"
+             [(ngModel)]="patient.name_en.family">
+      </div>
+    </div>
+  </div>
+</div>
