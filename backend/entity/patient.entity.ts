@@ -7,6 +7,6 @@ export class Patient {
   @PrimaryGeneratedColumn()
   id: string;
 
-
+  
 }
 
