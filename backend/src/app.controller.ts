@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
-import { DropdownItem } from 'models/common.models';
+import { DropdownItem, FHIRPatient } from 'models/common.models';
 import { GENDERS, PREFIX_EN_CONSTANTS, PREFIX_TH_CONSTANTS } from 'constant/prefix.constants';
 import { Patient } from 'entity/patient.entity';
 
@@ -29,5 +29,10 @@ export class AppController {
     @Body() data: Patient,
   ): Promise<Patient> {
     return await this.appService.savePatient(data);
+  }
+
+  @Get('fhir-response')
+  async getFHIRResponse(): Promise<FHIRPatient> {
+    return await this.appService.getFhirPatient();
   }
 }

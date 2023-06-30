@@ -11,13 +11,13 @@ export class Patient {
     type: 'jsonb',
     nullable: true,
   })
-  nameTH: JSON;
+  nameTH: { prefix: string, family: string, given: string};
 
   @Column({
     type: 'jsonb',
     nullable: true,
   })
-  nameEN: JSON;
+  nameEN: { prefix: string, family: string, given: string};
 
   @Column({ nullable: true })
   gender: string;
