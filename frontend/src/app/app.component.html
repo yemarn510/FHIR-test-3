@@ -13,7 +13,7 @@
         <ng-select [items]="prefixesTH"
                  bindLabel="display"
                  bindValue="value"
-                 [(ngModel)]="patient.name_th.prefix">
+                 [(ngModel)]="patient.nameTH.prefix">
         </ng-select>
       </div>
     </div>
@@ -22,7 +22,7 @@
       <div class="col-8">
         <input type="text"
              class="form-control"
-             [(ngModel)]="patient.name_th.given">
+             [(ngModel)]="patient.nameTH.given">
       </div>
     </div>
     <div class="row no-gutters mb-3 align-items-center">
@@ -30,7 +30,7 @@
       <div class="col-8">
         <input type="text"
              class="form-control"
-             [(ngModel)]="patient.name_th.family">
+             [(ngModel)]="patient.nameTH.family">
       </div>
     </div>
   </div>
@@ -45,7 +45,7 @@
         <ng-select [items]="prefixesEN"
                  bindLabel="display"
                  bindValue="value"
-                 [(ngModel)]="patient.name_en.prefix">
+                 [(ngModel)]="patient.nameEN.prefix">
         </ng-select>
       </div>
     </div>
@@ -54,7 +54,7 @@
       <div class="col-8">
         <input type="text"
              class="form-control"
-             [(ngModel)]="patient.name_en.given">
+             [(ngModel)]="patient.nameEN.given">
       </div>
     </div>
     <div class="row no-gutters mb-3 align-items-center">
@@ -62,8 +62,59 @@
       <div class="col-8">
         <input type="text"
              class="form-control"
-             [(ngModel)]="patient.name_en.family">
+             [(ngModel)]="patient.nameEN.family">
       </div>
     </div>
   </div>
+
+  <div class="box">
+    <div class="row no-gutters mb-3 align-items-center">
+      <h4 class="col-4 mb-0">Gender</h4>
+      <div class="col-8">
+        <ng-select [items]="genders"
+                   bindLabel="display"
+                   bindValue="value"
+                   [(ngModel)]="patient.gender">
+        </ng-select>
+      </div>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="row no-gutters mb-3 align-items-center">
+      <h4 class="col-4 mb-0">National ID</h4>
+      <div class="col-8">
+        <input type="text"
+             class="form-control"
+             [(ngModel)]="patient.thaiID">
+      </div>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="row no-gutters mb-3 align-items-center">
+      <h4 class="col-4 mb-0">Birth Date</h4>
+      <div class="col-8">
+        <input type="text"
+             class="form-control"
+             [(ngModel)]="patient.birthDate">
+      </div>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="row no-gutters mb-3 align-items-center">
+      <h4 class="col-4 mb-0">Contacts</h4>
+      <div class="col-8">
+        <input type="text"
+             class="form-control"
+             [(ngModel)]="patient.birthDate">
+      </div>
+    </div>
+  </div>
+
+  <button class="btn btn-primary mt-3"
+          (click)="createNewPatient()">
+    Save
+  </button>
 </div>

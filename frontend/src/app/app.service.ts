@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { DropdownItem } from './app.models';
+import { Patient } from './models';
 
 @Injectable({
   providedIn: 'root'
@@ -20,5 +21,9 @@ export class AppService {
 
   getGenders(): Observable<DropdownItem[]> {
     return this.http.get<DropdownItem[]>(this.endPoint + '/gender');
+  }
+
+  savePatient(data: Patient): Observable<void> {
+    return this.http.post<void>(this.endPoint + '/patient', data);
   }
 }

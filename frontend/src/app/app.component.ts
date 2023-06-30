@@ -41,6 +41,9 @@ export class AppComponent implements OnInit {
   }
 
   createNewPatient(): void {
-
+    this.appService.savePatient(this.patient).subscribe(patient => {
+      // this.patient = new Patient();
+      console.warn('Saved patient', this.patient);
+    });
   }
 }

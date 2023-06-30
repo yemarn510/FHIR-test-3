@@ -2,11 +2,10 @@
 
 export class Patient {
   constructor(
-    public name_th: Name = new Name(),
-    public name_en: Name = new Name(),
-    public gender_th: string = '',
-    public gender_en: string = '',
-    public thai_id: string = '',
+    public nameTH: Name = new Name(),
+    public nameEN: Name = new Name(),
+    public gender: string = '',
+    public thaiID: string = '',
     public birthDate: string = '',
     public active: boolean = true,
     public contacts: Contact[] = [],
