@@ -37,8 +37,14 @@ export interface Identifier {
 }
 
 export interface Name {
+	extension: Extension[];
 	text: string;
 	family: string;
 	given: string[];
 	prefix: string[];
+}
+
+export interface Extension {
+	url:	string;
+	valueCode: string;
 }

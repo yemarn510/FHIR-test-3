@@ -30,8 +30,8 @@ export class AppService {
       identifier: [ this.fhir.thaiIDIdentifier(patient.thaiID) ],
       active: patient.active,
       name: [
-        this.fhir.name(patient.nameTH),
-        this.fhir.name(patient.nameEN),
+        this.fhir.name(patient.nameTH, 'th'),
+        this.fhir.name(patient.nameEN, 'en'),
       ],
       gender: patient.gender,
       birthDate: patient.birthDate,

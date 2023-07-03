@@ -4,9 +4,15 @@ import { Identifier, Name, Type, Coding } from 'models/common.models';
 @Injectable()
 export class FhirService {
 
-  name(data: { prefix: string, family: string, given: string}): Name {
+  name(data: { prefix: string, family: string, given: string}, lang: 'th' | 'en'): Name {
     return {
-      text: data['text'],
+      extension : [
+        {
+          "url" : "http://hl7.org/fhir/StructureDefinition/language",
+          "valueCode" : lang,
+        }
+      ],
+      text: `${data.prefix} ${data.given} ${data.family}`,
       family: data.family,
       given: [ data.given ],
       prefix: [ data.prefix ]
