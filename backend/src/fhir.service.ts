@@ -42,12 +42,8 @@ export class FhirService {
     }
   }
 
-  coding(data: JSON): Coding {
-    return {
-      system: '',
-      code: '',
-      display: '',
-    }
+  coding(data: { system: string, code: string, display: string }): Coding {
+    return new Coding({system: data.system, code: data.code, display: data.display})
   }
 
   thaiIDIdentifier(value: string): Identifier {
@@ -55,11 +51,11 @@ export class FhirService {
       "use" : "official",
       "type" : {
         "coding" : [
-          {
+          this.coding({
             "system" : "https://terms.sil-th.org/CodeSystem/cs-th-identifier-type",
             "code" : "cid",
             "display" : "เลขประจำตัวประชาชนไทย"
-          }
+          })
         ]
       },
       "system" : "https://terms.sil-th.org/id/th-cid",

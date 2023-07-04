@@ -13,10 +13,15 @@ export interface FHIRPatient {
 	birthDate: string;
 }
 
-export interface Coding {
-	system: string;
-	code: string;
-	display: string;
+export class Coding {
+
+	constructor(
+		public object: {
+			system: string,
+			code: string,
+			display: string,
+		}
+	) {}
 }
 
 export interface Type {
